@@ -15,6 +15,9 @@ class Rectangle:
         yield {'length': self.length}
         yield {'width': self.width}
 
-rect = Rectangle(10, 5)
+
+a = int(input("Enter Length : "))
+b = int(input("Enter Width : "))
+rect = Rectangle(a,b)
 for i in rect:
     print(i)
