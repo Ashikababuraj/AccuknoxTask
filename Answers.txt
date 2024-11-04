@@ -1,0 +1,11 @@
+Question 1 : Are Django signals executed synchronously or asynchronously by default?
+Answer : By default, Django signals are executed synchronously. when a signal is sent, the associated receivers are executed synchronously.
+
+
+Question 2 : Do Django signals run in the same thread as the caller?
+Answer : Yes, Django signals run in the same thread as the caller. when we send a signal, the connected receiver functions are executed synchronously in the same thread.
+
+# Example showing, when a signal is sent with a threadId... the receiver executes the same thread with that threadId.
+
+Question 3 : Do Django signals run in the same database transaction as the caller?
+Answer : By default, Django signals do not run in the same database transaction as the caller. Instead, they execute after the transaction of the caller has been committed.
